@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <head>
+    <!--tab name  -->
+    <title>The Vault!</title>
+  </head>
+  <body>
+    <h1>Are you worthy?</h1>
+    <p>If you believe you are press the buttons below.</p>
+<!-- begining of javascript -->
+    <script>
+// setting variable values
+      const w=1;
+      const x=3;
+      const y=2;
+      const z=4;
+/* here using values set for w,x,y,z to produce 
+correct answers of 10, 40, and 39 to open vault.*/
+      const ansone= x*y+z;
+/* now that ansone is set with answer being 10 
+use it mixed with previous variables to get correct number output.*/
+      const anstwo= ansone*z;
+      const ansthr= ansone*z-w;
+// setting up string for dialog box
+      const congrats= 'You have received this message because you have been chosen to open an important vault. Here is the secret combination:';
+// adding the alert box with contents of congrats string and variable answers.
+      alert(congrats + ansone +'-'+ anstwo +'-'+ ansthr);
+    </script>
+<!-- adding buttons and text above that will change to produce vault combination -->
+    <p id="first">?</p>  
+      <button type="button" onclick="document.getElementById('first').innerHTML= ansone">See no evil</button>
+    <p id="second">??</p>
+      <button type="button" onclick="document.getElementById('second').innerHTML= anstwo">Speak no evil</button>
+    <p id="third">???</p>
+      <button type="button" onclick="document.getElementById('third').innerHTML= ansthr">Hear no evil</button>
+  </body>
